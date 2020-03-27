@@ -2,10 +2,13 @@ CACHE MANIFEST
 #v1.0
 
 CACHE:
+https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js
 /js/modernizr.js
+/js/script.js
 /img/1.png
 
 NETWORK:
 *
 
 FALLBACK:
+/ /offline.html
