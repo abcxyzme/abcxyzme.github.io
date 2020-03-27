@@ -6,5 +6,6 @@ CACHE:
 /img/1.png
 
 NETWORK:
+*
 
 FALLBACK:
