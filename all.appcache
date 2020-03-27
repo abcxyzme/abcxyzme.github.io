@@ -1,0 +1,10 @@
+CACHE MANIFEST
+#v1.0
+
+CACHE:
+/js/modernizr.js
+/img/1.png
+
+NETWORK:
+
+FALLBACK:

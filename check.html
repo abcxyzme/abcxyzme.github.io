@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5</title>
+    <script src="js/modernizr.js"></script>
+    <style>
+        .yes {
+            color: green;
+        }
+
+        .no {
+            color: red;
+        }
+
+        span {
+            padding: .3rem .5rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+<h1 style="width: 100%" id="features"></h1>
+<script>
+    const h1 = document.getElementById('features');
+    let no = [];
+    document.getElementsByTagName('html')[0].getAttribute('class').split(' ').forEach(c => {
+        c = c.trim();
+        if (c !== '') {
+            if (c.startsWith('no-')) {
+                no.push(c);
+            } else {
+                const span = document.createElement('span');
+                span.innerText = c;
+                span.setAttribute('class', 'yes');
+                h1.appendChild(span);
+            }
+        }
+    });
+    h1.appendChild(document.createElement('hr'));
+    no.forEach(c => {
+        const span = document.createElement('span');
+        span.innerText = c;
+        span.setAttribute('class', 'no');
+        h1.appendChild(span);
+    });
+</script>
+</body>
+</html>
